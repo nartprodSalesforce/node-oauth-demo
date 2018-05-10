@@ -1,0 +1,21 @@
+{
+  "name": "oauth-demo",
+  "version": "1.0.0",
+  "description": "Oath flow demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "/Users/swerner/Documents/Visual Studio Code Workspace/node-oauth-demo/.git/"
+  },
+  "author": "Stuart Werner",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "hbs": "^4.0.1",
+    "http": "0.0.0"
+  }
+}
