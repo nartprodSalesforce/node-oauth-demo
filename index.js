@@ -2,6 +2,9 @@ const express = require('express');
 const hbs = require('hbs'); //handbars backage for formating templates on the page
 const fs = require('fs');
 const port=  process.env.PORT || 3000;  //dynamic port assignment
+var querystring = require('querystring');
+var https = require('https');
+
 var http = require('http'); //node http.agent https://nodejs.org/api/http.html#http_class_http_agent
 
 var app = express();
@@ -35,7 +38,21 @@ app.get('/',(req,res)=> {
     });
 
 });
+app.get('/oauth',(req,res)=>{
+    var sforg = req.query.sforg; 
+    var secret = req.query.secret; 
+    var redirect = req.query.redirect; 
+    
+    console.log('salesforce org: ' +  sforg);
+    console.log('consumer secret ' +  secret);
+    console.log('redirect ' +  redirect);
+    //
+    res.render('oauth.hbs',{
+        pageTitle: 'OAuth Page'
 
+    });
+    
+});
 
 
 //Listen for request on the port

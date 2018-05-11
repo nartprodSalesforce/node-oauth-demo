@@ -9,7 +9,13 @@
     <body>
         {{>header}}
         <p> {{welcomeMsg}}</p>
+        <form action="/oauth">
+            SF Org <input type="text" name="sforg"><br>
+            Secret <input type="text" name="secret"><br>
+            Redirect <input type="text" name="redirect"><br>
 
+            <input type="submit" value="Submit" >
+        </form>
         {{>footer}}
     </body>
 
